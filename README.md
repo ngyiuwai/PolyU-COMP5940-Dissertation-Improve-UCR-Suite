@@ -23,4 +23,4 @@ As you can see, *LB_Kim* only filter out 7.64 % of subsequences when find answer
 In the next step, I will try to improve the speed of UCR Suite by using lower resolution techniques and replacing *LB_Kim*.
 It is expected to be done before March 2020.
 
-*Regarding to Note 1, please note that the purpose of this project is to build a new lower bound to replace LB_Kim. True DTW and LB_Keogh2 is not the major concern in this project. I will write the correct LB_Keogh2 soon, but not intends to rewrite True DTW to make it faster.
+*Regarding to Note 1, please note that the purpose of this project is to design a new lower bound to replace LB_Kim. True DTW and LB_Keogh2 are not the major concern in this project. I will complete the LB_Keogh2, but not intend to rewrite True DTW to make it more efficent.*
