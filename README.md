@@ -2,15 +2,15 @@
 
 *Work in progress. To be completed in May 2020.*
 
-The Python script are UCR Suite written in Python.
-The original UCR Suite is written in C++ (using pointers). I have translated it to Python (using linked lists).
+UCR Suite written in Python.
+The original UCR Suite is written in C++ (using pointers). I translated it to Python (using linked lists).
 UCR Suite: https://www.cs.ucr.edu/~eamonn/UCRsuite.html
 
-- *Note 1: The Python script works. But (1) the LB_Keogh2 in original UCR Suite is not completed, and (2) the function **distance.dynamicTimeWraping( )** is an approximation of DTW only. The true DTW, which use dynamic programming, is **distance.dynamicTimeWraping_true( )**. It is very slow since Python is not designed for dynamic programming.*
+- *Note 1: The Python script works. But (1) LB_Keogh2 of original UCR Suite is not included here, and (2) the function **distance.dynamicTimeWraping( )** is an approximation of DTW only. The true DTW, which use dynamic programming, is **distance.dynamicTimeWraping_true( )**. It is very slow since Python is not designed for dynamic programming.*
 
 - *Note 2: Library Matplotlib is needed if you wish to visualize the code. No external library is needed if you just want to find k-nearest neighbours.*
 
-I have test searching a query with length = 421 and *Sakoe-Chiba band* = 5 among 0.5 million of data (electrocardiogram data which is used in the original paper https://www.cs.ucr.edu/~eamonn/SIGKDD_trillion.pdf. I extracted the first 0.5 million of data).
+I tested searching a query with length = 421 and *Sakoe-Chiba band* = 5 among 0.5 million of data. {electrocardiogram data which is used in the original paper https://www.cs.ucr.edu/~eamonn/SIGKDD_trillion.pdf. I extracted the first 0.5 million of data}
 
 **Experiment Result:**
 
@@ -19,8 +19,8 @@ Query length = 421
 - *Need to run LB_Keogh : 92.36 %*
 - *Need to run Dynamic Time Wraping: 0.63 %*
 
-As you can see, *LB_Kim* only filter out 7.64 % of subsequences when find answer for long query. It is not useful.
+As you can see, *LB_Kim* only filter out 7.64 % of subsequences. It is not useful for long query.
 In the next step, I will try to improve the speed of UCR Suite by using lower resolution techniques and replacing *LB_Kim*.
-It is expected to be done before March 2020.
+It is expected to be completed before March 2020.
 
-*Regarding to Note 1, please note that the purpose of this project is to design a new lower bound to replace LB_Kim. True DTW and LB_Keogh2 are not the major concern in this project. I will complete the LB_Keogh2, but not intend to rewrite True DTW to make it more efficent.*
+*Regarding to Note 1, please note that the purpose of this project is to design a new lower bound to replace LB_Kim. True DTW and LB_Keogh2 are not the major concerns in this project. I will update LB_Keogh2, but not intend to rewrite True DTW to make it more efficent.*
