@@ -30,6 +30,6 @@ It is expected to be completed before March 2020.
 Further updates here:
 https://github.com/ngyiuwai/PolyU-COMP5940-Final-Dissertation-Improve-UCR-Suite-by-Low-Resolution-Technique
 
-A new lower bound function, *LB_LowResED* is created. It accelerates the calculation of Euclidean distance by low resolution technique. *[Note: LB_Keogh is Euclidean distance for upper/lower bound of query & subsequences]*
+A new lower bound function, *LB_LowResED* is created. It accelerates the calculation of Euclidean distance by low resolution technique. *[Note: LB_Keogh is Euclidean distance for upper/lower bound of query & subsequences.]*
 
-*LB_LowResED* is a better choice comparing with *LB_Kim* for long query. This new cascading lower bound can improve UCR Suite.
+*LB_LowResED* is a better choice comparing with *LB_Kim* for long query. It is a new cascading lower bound, which can improve UCR Suite.
